@@ -21,4 +21,4 @@ WORKDIR /app
 
 EXPOSE 7350/tcp
 # Запускаем сервер Nakama
-RUN  ps aux | grep dockerd && docker ps && docker-compose -f docker-compose.yml up
+RUN  docker ps && docker-compose -f docker-compose.yml up
