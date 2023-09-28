@@ -6,7 +6,11 @@ RUN apt-get update && apt-get install -y curl docker.io docker-compose
 
 # Устанавливаем переменную DOCKER_HOST
 ENV DOCKER_HOST=unix:///var/run/docker.sock
+# Запускаем демона Docker
+RUN nohup dockerd &
 
+# Ждем, пока демон Docker запустится
+RUN sleep 5
 # Копируем файлы проекта в контейнер
 COPY . /app
 
@@ -17,4 +21,4 @@ WORKDIR /app
 
 EXPOSE 7350/tcp
 # Запускаем сервер Nakama
-RUN docker-compose -f docker-compose.yml up
+RUN  ps aux | grep dockerd && docker ps && docker-compose -f docker-compose.yml up
