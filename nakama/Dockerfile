@@ -9,6 +9,6 @@ COPY . /app
 
 # Задаем рабочую директорию
 WORKDIR /app
-
+EXPOSE 7350
 # Запускаем сервер Nakama
 CMD docker-compose -f docker-compose.yml up
