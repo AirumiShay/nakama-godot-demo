@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y curl docker.io docker-compose
 ENV DOCKER_HOST=unix:///var/run/docker.sock
 
 # Копируем файлы проекта в контейнер
-#COPY . /app
+COPY . /app
 
 # Задаем рабочую директорию
-#WORKDIR /app
+WORKDIR /app
 
 # Открываем порт
 
