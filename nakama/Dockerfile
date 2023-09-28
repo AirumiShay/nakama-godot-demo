@@ -1,24 +1,27 @@
-# Используем образ Ubuntu 20.04
+# Use the official Ubuntu 20.04 image
+
 FROM ubuntu:20.04
 
-# Устанавливаем необходимые пакеты
+# Install the required packages
+
 RUN apt-get update && apt-get install -y curl docker.io docker-compose
 
-# Устанавливаем переменную DOCKER_HOST
-ENV DOCKER_HOST=unix:///var/run/docker.sock
-# Запускаем демона Docker
-RUN nohup dockerd &
+# Set the environment variable
 
-# Ждем, пока демон Docker запустится
-RUN sleep 5
-# Копируем файлы проекта в контейнер
+ENV DOCKER_HOST=unix:///var/run/docker.sock
+
+# Copy the project files into the container
+
 COPY . /app
 
-# Задаем рабочую директорию
+# Set the working directory
+
 WORKDIR /app
 
-# Открываем порт
+# Expose the port
 
 EXPOSE 7350/tcp
-# Запускаем сервер Nakama
-RUN  docker && docker ps && docker-compose -f docker-compose.yml up
+
+# Run the server
+
+CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
