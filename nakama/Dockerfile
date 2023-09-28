@@ -3,7 +3,8 @@ FROM ubuntu:20.04
 
 # Устанавливаем необходимые пакеты
 RUN apt-get update && apt-get install -y curl docker.io docker-compose
-
+# Запускаем демона Docker
+RUN service docker start
 # Копируем файлы проекта в контейнер
 COPY . /app
 
