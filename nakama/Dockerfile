@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y curl docker.io docker-compose
 # Запускаем демона Docker
 
 RUN dockerd &
+# Устанавливаем переменную DOCKER_HOST
+ENV DOCKER_HOST=unix:///var/run/docker.sock
+
 # Копируем файлы проекта в контейнер
 COPY . /app
 
@@ -13,4 +16,4 @@ COPY . /app
 WORKDIR /app
 EXPOSE 7350
 # Запускаем сервер Nakama
-CMD whoami && ls -l && docker-compose -f docker-compose.yml up
+CMD docker-compose -v && ls  && docker-compose -f docker-compose.yml up
