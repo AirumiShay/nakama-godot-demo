@@ -1,6 +1,6 @@
 # Use the official Ubuntu 20.04 image
 
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 # Install the required packages
 
