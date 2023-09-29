@@ -2,7 +2,7 @@
 FROM ubuntu:20.04
 
 # Устанавливаем необходимые пакеты
-#RUN apt-get update
+RUN apt-get update
 
 # Копируем файлы проекта в контейнер
 COPY . /app
@@ -14,7 +14,6 @@ RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /app
 
 EXPOSE 5225/tcp
 
-
-
 # Запускаем сервер Godot
-CMD /app/server --main-pack /app/server.pck
+CMD /app/server/server --main-pack /app/server.pck
+
