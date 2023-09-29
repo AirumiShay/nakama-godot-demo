@@ -10,7 +10,7 @@ COPY . /app
 # Задаем рабочую директорию
 WORKDIR /app
 # Распаковываем сервер
-RUN mkdir godot
+
 RUN pwd && ls -l && tar -xfv /app/server.tar.gz -C /
 RUN cd /app/server && python /app/server/server.py
 EXPOSE 5225
