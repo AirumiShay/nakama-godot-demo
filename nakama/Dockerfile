@@ -23,5 +23,6 @@ WORKDIR /app
 EXPOSE 7350/tcp
 
 # Run the server
-
+CMD ["dockerd &"]
+CMD ["sleep 5"]
 CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
