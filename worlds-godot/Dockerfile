@@ -14,7 +14,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install tornado
 RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /
 RUN cd /app/server && python3 /app/server/server.py
-EXPOSE 5225
+EXPOSE 5225 4242
 
 # Запускаем сервер Godot
 CMD /server --main-pack /app/server.pck
