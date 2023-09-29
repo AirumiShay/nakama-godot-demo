@@ -32,4 +32,4 @@ RUN /usr/bin/dockerd &
 RUN sleep 5
 # Run the server Nakama
 
-CMD ["/usr/bin/docker-compose", "-f", "docker-compose.yml", "up"]
+CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
