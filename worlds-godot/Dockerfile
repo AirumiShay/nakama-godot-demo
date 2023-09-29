@@ -10,7 +10,7 @@ COPY . /app
 # Задаем рабочую директорию
 WORKDIR /app
 # Распаковываем сервер
-RUN pwd && ls -l && tar -xf /app/server.tar.xz -C /app
+RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /app
 
 EXPOSE 5225/tcp
 
