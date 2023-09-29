@@ -20,7 +20,7 @@ WORKDIR /app
 
 # Expose the ports
 
-EXPOSE 8080 7350 26257 7349 7351 9100 9090/tcp
+EXPOSE 8080 7350 26257 7349 7351 9100 9090
 
 # Specify the command to run when the container starts
 
