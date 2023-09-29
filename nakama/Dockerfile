@@ -23,5 +23,4 @@ WORKDIR /app
 EXPOSE 8080 7350 26257 7349 7351 9100 9090
 
 # Specify the command to run when the container starts
-
-CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
+RUN docker-compose -f docker-compose.yml up
