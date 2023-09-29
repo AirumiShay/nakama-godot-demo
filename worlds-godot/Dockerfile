@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Устанавливаем необходимые пакеты
-RUN apt-get update -y
+RUN apt-get update -y && apt-get install python3.11 -y
 
 # Копируем файлы проекта в контейнер
 COPY . /app
