@@ -9,6 +9,7 @@ COPY . /app
 
 # Задаем рабочую директорию
 WORKDIR /app
-
+EXPOSE 5225/tcp
+RUN tar -xf server.tar.xz
 # Запускаем сервер Nakama
 CMD ["./server", "--main-pack". "server.pck"]
