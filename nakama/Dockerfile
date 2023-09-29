@@ -18,19 +18,10 @@ COPY . /app
 
 WORKDIR /app
 
-# Expose the port
+# Expose the ports
 
-EXPOSE 8080/tcp
-EXPOSE 7350/tcp
-EXPOSE 26257/tcp
-EXPOSE 7349/tcp
-EXPOSE 7351/tcp
-EXPOSE 9100/tcp
-EXPOSE 9090/tcp
+EXPOSE 8080/tcp 7350/tcp 26257/tcp 7349/tcp 7351/tcp 9100/tcp 9090/tcp
 
-RUN /usr/bin/dockerd &
-RUN sleep 5
-RUN ps aux | grep dockerd
-# Run the server Nakama
+# Specify the command to run when the container starts
 
-RUN docker-compose -f docker-compose.yml up
+CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
