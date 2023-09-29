@@ -11,7 +11,7 @@ COPY . /app
 WORKDIR /app
 # Распаковываем сервер
 RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /app
-
+RUN cd /app/server && python3 /app/server/server.py
 EXPOSE 5225
 
 # Запускаем сервер Godot
