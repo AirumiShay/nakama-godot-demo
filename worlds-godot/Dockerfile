@@ -17,4 +17,4 @@ EXPOSE 5225/tcp
 
 
 # Запускаем сервер Godot
-RUN /app/server --main-pack /app/server.pck
+CMD /app/server --main-pack /app/server.pck
