@@ -15,7 +15,7 @@ RUN pip3 install tornado
 RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /
 RUN cd /app/server && python3 /app/server/server.py
 EXPOSE  4242
-
+CMD cd /app/server && python3 /app/server/server.py
 # Запускаем сервер Godot
 #CMD /server --main-pack /app/server.pck
 
