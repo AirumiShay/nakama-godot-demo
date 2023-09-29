@@ -10,6 +10,8 @@ COPY . /app
 # Задаем рабочую директорию
 WORKDIR /app
 EXPOSE 5225/tcp
-RUN tar -xf server.tar.xz
-# Запускаем сервер Nakama
+RUN pwd && ls
+# Распаковываем сервер
+CMD ["tar", "-xf". "server.tar.xz"]
+# Запускаем сервер Godot
 CMD ["./server", "--main-pack". "server.pck"]
