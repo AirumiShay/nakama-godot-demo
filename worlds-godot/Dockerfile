@@ -2,14 +2,16 @@
 FROM ubuntu:20.04
 
 # Устанавливаем необходимые пакеты
-RUN apt-get update
-# Распаковываем сервер
-RUN pwd && ls -l && tar -xf server.tar.xz
+#RUN apt-get update
+
 # Копируем файлы проекта в контейнер
 COPY . /app
 
 # Задаем рабочую директорию
 WORKDIR /app
+# Распаковываем сервер
+RUN pwd && ls -l && tar -xf server.tar.xz
+
 EXPOSE 5225/tcp
 
 
