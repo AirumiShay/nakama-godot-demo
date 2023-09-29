@@ -27,6 +27,9 @@ EXPOSE 7349/tcp
 EXPOSE 7351/tcp
 EXPOSE 9100/tcp
 EXPOSE 9090/tcp
-# Run the server
 
-CMD ["dockerd &", "sleep 5", "docker-compose", "-f", "docker-compose.yml", "up"]
+RUN /usr/bin/dockerd &
+RUN sleep 5
+# Run the server Nakama
+
+CMD ["/usr/bin/docker-compose", "-f", "docker-compose.yml", "up"]
