@@ -15,5 +15,5 @@ RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /app
 EXPOSE 5225/tcp
 
 # Запускаем сервер Godot
-CMD /app/server/server --main-pack /app/server.pck
+CMD /app/server --main-pack /app/server.pck
 
