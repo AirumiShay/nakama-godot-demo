@@ -21,6 +21,9 @@ WORKDIR /app
 # Expose the ports
 
 EXPOSE 8080 7350 26257 7349 7351 9100 9090
-
+RUN dockerd &
+RUN sleep 5
+RUN ps aux | grep dockerd
+RUN sleep 5
 # Specify the command to run when the container starts
 RUN docker-compose -f docker-compose.yml up
