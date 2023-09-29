@@ -20,9 +20,13 @@ WORKDIR /app
 
 # Expose the port
 
+EXPOSE 8080/tcp
 EXPOSE 7350/tcp
-
+EXPOSE 26257/tcp
+EXPOSE 7349/tcp
+EXPOSE 7351/tcp
+EXPOSE 9100/tcp
+EXPOSE 9090/tcp
 # Run the server
-CMD ["dockerd &"]
-CMD ["sleep 5"]
-CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
+
+CMD ["dockerd &", "sleep 5", "docker-compose", "-f", "docker-compose.yml", "up"]
