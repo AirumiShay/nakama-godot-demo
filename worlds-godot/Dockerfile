@@ -10,11 +10,11 @@ COPY . /app
 # Задаем рабочую директорию
 WORKDIR /app
 # Распаковываем сервер
-RUN pwd && ls -l && tar -xf server.tar.xz
+RUN pwd && ls -l && tar -xf /app/server.tar.xz -C /app
 
 EXPOSE 5225/tcp
 
 
 
 # Запускаем сервер Godot
-CMD pwd && ls && ./server --main-pack server.pck
+CMD /app/server --main-pack server.pck
