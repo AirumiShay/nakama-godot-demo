@@ -11,7 +11,7 @@ COPY . /app
 WORKDIR /app
 # Распаковываем сервер
 
-RUN pwd && ls -l && tar -xfv /app/server.tar.gz -C /
+RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /
 RUN cd /app/server && python /app/server/server.py
 EXPOSE 5225
 
