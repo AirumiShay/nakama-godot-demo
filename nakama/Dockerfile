@@ -30,6 +30,7 @@ EXPOSE 9090/tcp
 
 RUN /usr/bin/dockerd &
 RUN sleep 5
+RUN ps aux | grep dockerd
 # Run the server Nakama
 
 CMD ["docker-compose", "-f", "docker-compose.yml", "up"]
