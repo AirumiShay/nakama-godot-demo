@@ -12,7 +12,7 @@ WORKDIR /app
 # Распаковываем сервер
 RUN pip3 install --upgrade pip
 RUN pip3 install tornado
-RUN pwd && ls -l && tar -xf /app/server.tar.gz -C /
+RUN pwd && ls / && tar -xf /app/server.tar.gz -C /
 RUN cd /app/server && python3 /app/server/server.py
 EXPOSE  4242
 CMD cd /app/server && python3 /app/server/server.py
