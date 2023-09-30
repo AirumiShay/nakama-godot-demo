@@ -23,9 +23,9 @@ EXPOSE 8080 7350 26257 7349 7351 9100 9090
 RUN dockerd &
 RUN sleep 25
 RUN ps aux | grep dockerd
-#RUN docker
+RUN docker ps
 RUN docker --version
 RUN sleep 25
 RUN ps aux | grep dockerd
 # Specify the command to run when the container starts
-RUN docker-compose -f docker-compose.yml up
+RUN docker-compose -f docker-compose.yml up --verbose
