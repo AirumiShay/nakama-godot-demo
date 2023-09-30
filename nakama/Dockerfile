@@ -7,7 +7,7 @@ FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y curl docker.io docker-compose
 # Set the environment variable
 
-#ENV DOCKER_HOST=unix:///var/run/docker.sock
+ENV DOCKER_HOST=unix:///var/run/docker.sock
 
 # Copy the project files into the container
 
