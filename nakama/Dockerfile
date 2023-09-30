@@ -21,7 +21,7 @@ WORKDIR /app
 
 EXPOSE 8080 7350 26257 7349 7351 9100 9090
 RUN dockerd &
-RUN usermod -aG docker $USER
+RUN usermod -aG docker root
 RUN sleep 25
 RUN ps aux | grep dockerd
 RUN docker --version
