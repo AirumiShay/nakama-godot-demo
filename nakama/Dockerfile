@@ -7,8 +7,8 @@ FROM ubuntu:latest
 RUN apt-get update &&  apt install  -y apt-transport-https ca-certificates curl software-properties-common 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-RUN apt-cache policy docker-ce &&  apt install  -y docker-ce docker-compose
-RUN /usr/bin/systemctl status docker && apt-get install python3.11 python3-pip -y
+RUN apt-cache policy docker-ce &&  apt install  -y docker-ce docker-compose docker-compose-plugin
+RUN apt-get install python3.11 python3-pip -y
 # Set the environment variable
 
 #ENV DOCKER_HOST=unix:///var/run/docker.sock
