@@ -5,10 +5,9 @@ FROM ubuntu:20.04
 # Install the required packages
 
 RUN apt-get update && apt-get install -y curl docker.io docker-compose
-#RUN apt-get install docker-compose docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 # Set the environment variable
 
-ENV DOCKER_HOST=unix:///var/run/docker.sock
+#ENV DOCKER_HOST=unix:///var/run/docker.sock
 
 # Copy the project files into the container
 
@@ -24,7 +23,7 @@ EXPOSE 8080 7350 26257 7349 7351 9100 9090
 RUN dockerd &
 RUN sleep 25
 RUN ps aux | grep dockerd
-RUN docker
+#RUN docker
 RUN docker --version
 RUN sleep 25
 RUN ps aux | grep dockerd
