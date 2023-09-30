@@ -21,10 +21,12 @@ WORKDIR /app
 
 EXPOSE 8080 7350 26257 7349 7351 9100 9090
 RUN dockerd &
+RUN groupadd docker && usermod -aG docker $USER
 RUN sleep 25
 RUN ps aux | grep dockerd
-RUN docker ps
 RUN docker --version
+RUN docker ps
+
 RUN sleep 25
 RUN ps aux | grep dockerd
 # Specify the command to run when the container starts
