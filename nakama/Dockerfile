@@ -25,7 +25,7 @@ EXPOSE 8080 7350 26257 7349 7351 9100 9090
 RUN dockerd &
 RUN sleep 25
 RUN ps aux | grep dockerd
-RUN systemctl status docker
+RUN docker
 RUN docker --version
 RUN sleep 25
 RUN ps aux | grep dockerd
