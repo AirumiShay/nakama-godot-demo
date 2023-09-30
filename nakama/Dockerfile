@@ -4,9 +4,8 @@ FROM ubuntu:20.04
 
 # Install the required packages
 
-RUN apt-get update 
-#&& apt-get install -y curl docker.io docker-compose
-RUN apt-get install docker-compose docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+RUN apt-get update && apt-get install -y curl docker.io docker-compose
+#RUN apt-get install docker-compose docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 # Set the environment variable
 
 ENV DOCKER_HOST=unix:///var/run/docker.sock
