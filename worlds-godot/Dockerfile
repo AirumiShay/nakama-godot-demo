@@ -1,6 +1,7 @@
 # Используем образ Ubuntu 22.04
 FROM ubuntu:latest
 FROM python:3.11
+RUN pip
 # Устанавливаем необходимые пакеты
 RUN apt-get update -y && apt-get install python3.11 python3-pip -y
 
@@ -10,6 +11,7 @@ COPY . /app
 # Задаем рабочую директорию
 WORKDIR /app
 # Распаковываем сервер
+
 RUN pip3 install --upgrade pip
 RUN pip3 install tornado
 #RUN pwd && ls /app && 
