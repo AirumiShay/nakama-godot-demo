@@ -18,7 +18,7 @@ EXPOSE  9998 6317
 RUN sleep 5
 RUN wget -qO- ident.me
 # Запускаем python3-сервер MUD CataclysmLD port 6317
-RUN cd /app/mud && python3 /app/mud/server.py
+RUN cd /app/mud && python3 /app/mud/server.py &
 RUN sleep 5
 # Запускаем сервер Godot -not working now
 #CMD /server --main-pack /app/server.pck
