@@ -1,10 +1,11 @@
-# Use the official Ubuntu 20.04 image
+# Use the official Ubuntu 22.04 image
 
-FROM ubuntu:20.04
+FROM ubuntu:latest
 
 # Install the required packages
 
 RUN apt-get update && apt-get install -y curl docker.io docker-compose
+RUN apt-get install python3.11 python3-pip -y
 # Set the environment variable
 
 ENV DOCKER_HOST=unix:///var/run/docker.sock
@@ -24,7 +25,7 @@ RUN dockerd &
 RUN usermod -aG docker root
 RUN sleep 25
 RUN ps aux | grep dockerd
-RUN docker --version
+
 RUN docker ps
 
 RUN sleep 25
