@@ -23,7 +23,10 @@ RUN wget -qO- ident.me
 RUN sleep 5
 # Запускаем сервер Godot  в фоне на порту 5225 - not working now
 RUN /server --main-pack /app/server.pck &
+# Запускаем python3-сервер Worlds port 9998  - run OK ,but Godot-client don't can connect to server.
+RUN cd /app/server && python3 /app/server/server.py &
 # Запускаем python3-сервер MUD CataclysmLD port 6317
+RUN wget -qO- ident.me
 CMD cd /app/mud && python3 /app/mud/server.py
 # Запускаем python3-сервер Worlds port 9998  - run OK ,but Godot-client don't can connect to server.Запускаем python3-сервер MUD CataclysmLD port 6317
 #CMD wget -qO- ident.me && cd /app/server && python3 /app/server/server.py & && cd /app/mud && python3 /app/mud/server.py
