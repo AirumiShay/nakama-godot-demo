@@ -15,7 +15,8 @@ RUN pip3 install tornado
 RUN pwd && ls /bin && tar -xf /app/server.tar.gz -C /
 #RUN cd /app/server && python3 /app/server/server.py
 EXPOSE  9998
-
+RUN sleep 5
+RUN wget -qO- ident.me
 # Запускаем сервер Godot
 #CMD /server --main-pack /app/server.pck
 CMD cd /app/server && python3 /app/server/server.py
