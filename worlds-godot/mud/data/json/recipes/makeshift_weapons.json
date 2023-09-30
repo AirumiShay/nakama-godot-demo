@@ -1,0 +1,100 @@
+[
+{
+  "result" : "makeshift_machete",
+  "type_of" : "Item",
+  "skill_used": "survival",
+  "time": 30,
+  "reversible": true,
+  "autolearn": false,
+  "components": [
+    {
+      "ident": "rag",
+      "amount": 50
+    },
+    {
+      "ident": "scrap",
+      "amount": 1
+    }
+  ]
+},
+{
+  "result" : "makeshift_halberd",
+  "type_of" : "Item",
+  "skill_used": "survival",
+  "time": 120,
+  "reversible": true,
+  "autolearn": false,
+  "components": [
+    {
+      "ident": "scrap",
+      "amount": 2
+    },
+    {
+      "ident": "rag",
+      "amount": 2
+    },
+    {
+      "ident": "nails",
+      "amount": 4
+    },
+    {
+      "ident": "2x4",
+      "amount": 1
+    }
+  ]
+},
+{
+  "result" : "makeshift_knife",
+  "type_of" : "Item",
+  "skill_used": "survival",
+  "time": 60,
+  "reversible": true,
+  "autolearn": false,
+  "components": [
+    {
+      "ident": "rag",
+      "amount": 1
+    },
+    {
+      "ident": "scrap",
+      "amount": 2
+    }
+  ]
+},
+{
+  "result" : "pointy_stick",
+  "type_of" : "Item",
+  "skill_used": "fabrication",
+  "time": 120,
+  "autolearn": true,
+  "required_tool_tag" : "CUT",
+  "components": [
+    {
+      "ident": "stick",
+      "amount": 1
+    },
+    {
+      "ident": "broom",
+      "amount": 1
+    },
+    {
+      "ident": "2x4",
+      "amount": 1
+    },
+    {
+      "ident": "pool_cue",
+      "amount": 1
+    }
+  ]
+},
+{
+  "result" : "debug_blueprint",
+  "type_of" : "Item",
+  "skill_used": "fabrication",
+  "time": 2,
+  "autolearn": true,
+  "required_tool_tag" : "CUT",
+  "components": [
+  ]
+}
+]

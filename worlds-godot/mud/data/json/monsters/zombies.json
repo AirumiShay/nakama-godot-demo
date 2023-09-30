@@ -1,0 +1,38 @@
+[
+  {
+    "ident": "zombie_walker",
+    "group": "MONSTER",
+    "name": "walking zombie",
+    "description": "A human body, swaying as it moves, an unstoppable rage is visible in its oily black eyes.",
+    "default_faction": "zombie",
+    "species": "homosapien",
+    "tier": 1,
+    "size": 0.5,
+    "hitdie": 1,
+    "material": "skin_human",
+    "aggression": 100,
+    "morale": 100,
+    "attacks": [
+      {
+        "attack": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "body_parts": [
+      {
+        "HEAD":true,
+        "TORSO":true,
+        "ARM_LEFT":false,
+        "ARM_RIGHT":false,
+        "HAND_LEFT":false,
+        "HAND_RIGHT":false,
+        "FOOT_LEFT":false,
+        "FOOT_RIGHT":false,
+        "LEG_LEFT":false,
+        "LEG_RIGHT":false
+      }
+    ]
+  }
+]
