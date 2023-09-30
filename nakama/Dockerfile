@@ -4,7 +4,7 @@ FROM ubuntu:latest
 
 # Install the required packages
 
-RUN apt-get update &&  install apt-transport-https ca-certificates curl software-properties-common -y
+RUN apt-get update &&  install -y apt-transport-https ca-certificates curl software-properties-common 
 RUN apt-get install -y docker.io docker-compose
 RUN apt-get install python3.11 python3-pip -y
 # Set the environment variable
