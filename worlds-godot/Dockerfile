@@ -1,6 +1,6 @@
 # Используем образ Ubuntu 20.04
 FROM ubuntu:latest
-#FROM python:3.11
+
 # Устанавливаем необходимые пакеты
 RUN apt-get update -y && apt-get install python3.11 python3-pip -y
 
@@ -23,4 +23,5 @@ RUN sleep 5
 # Запускаем сервер Godot -not working now
 #CMD /server --main-pack /app/server.pck
 # Запускаем python3-сервер Worlds port 9998  - run OK ,but Godot-client don't can connect to server.Запускаем python3-сервер MUD CataclysmLD port 6317
-CMD wget -qO- ident.me && cd /app/server && python3 /app/server/server.py & && cd /app/mud && python3 /app/mud/server.py
+CMD wget -qO- ident.me  && cd /app/mud && python3 /app/mud/server.py
+#CMD wget -qO- ident.me && cd /app/server && python3 /app/server/server.py & && cd /app/mud && python3 /app/mud/server.py
